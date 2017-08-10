@@ -4,7 +4,7 @@ let button = document.querySelector("button");
 let input = document.querySelector("input");
 let grid = document.querySelector(".grid");
 let currentTrack = document.querySelector(".music-player");
-let nowPLaying = document.querySelector(".nowPLaying");
+let nowPlaying = document.querySelector(".nowPlaying");
 let url = "https://itunes.apple.com/search?";
 
 button.addEventListener("click", function (e) {
@@ -21,13 +21,13 @@ button.addEventListener("click", function (e) {
       let bandName = results[i].artistName;
       let songTitle = results[i].trackName;
       let trackPreview = results[i].previewUrl;
-      grid.innerHTML += `<div class="results"><img id="track-${[i]}" value="${trackPreview}" src ="${thumbnail}"><p><span>Song: </span>${songTitle}</p><p><span>Artist: </span>${bandName}</p ></div > `;
+      grid.innerHTML += `<div  class="results"><img id="${songTitle}" value="${trackPreview}" src ="${thumbnail}"><p><span>Song: </span >${songTitle}</p><p><span>Artist: </span>${bandName}</p ></div > `;
     }
 
     grid.addEventListener("click", function (e) {
       let trackPrev = e.target.getAttribute('value');
-      nowPlaying = "";
-      nowPlaying.innerHTML = e.target.value;
+      let trackDis = e.target.getAttribute("id");
+      nowPlaying.innerHTML = trackDis;
       currentTrack.setAttribute("src", trackPrev);
 
     })
