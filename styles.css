@@ -1,5 +1,10 @@
 body {
   background-color: #60d9f1;
+  margin: 0;
+}
+
+.results-container {
+  margin: 20px;
 }
 
 .grid {
@@ -10,7 +15,7 @@ body {
 
 .results {
   display: inline-block;
-  margin: 20px 0 0 20px;
+  margin: 20px 0 100px 20px;
   flex-grow: 1;
   width: 18%;
   height: 300px;
@@ -31,8 +36,37 @@ img {
 
 p {
   margin: 0;
+  font-size: 18px;
 }
 
 span {
   color: red;
+  font-size: 20px;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+audio {
+  width: 50%;
+}
+
+#searchForm {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.nowPlaying {
+  margin: 10px;
+  font-size: 25px;
+}
+
+input {
+  width: 25%;
+  height: 40px;
+  font-size: 20px;
 }
