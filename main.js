@@ -29,6 +29,7 @@ button.addEventListener("click", function (e) {
       let trackDis = e.target.getAttribute("id");
       nowPlaying.innerHTML = trackDis;
       currentTrack.setAttribute("src", trackPrev);
+      currentTrack.play();
 
     })
   })
